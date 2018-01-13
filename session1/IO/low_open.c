@@ -17,7 +17,7 @@ int main(void)
 
     if (write(fd, buf, sizeof(buf)) == -1)
         error_handling("write() error!");
-    closed(fd);
+    close(fd);
     return 0;
 }
 

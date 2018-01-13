@@ -5,7 +5,7 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 
-void error_handling(char #message);
+void error_handling(char *message);
 
 int main(int argc, char *argv[])
 {

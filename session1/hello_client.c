@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     }
 
     sock = socket(PF_INET, SOCK_STREAM, 0);
-    if (socket == -1)
+    if (sock == -1)
         error_handling("socket() error");
 
     memset(&serv_addr, 0, sizeof(serv_addr));

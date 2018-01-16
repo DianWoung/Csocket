@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
     struct sockaddr_in clnt_addr;
     socklen_t clnt_addr_size;
 
-    char message[] = "Hello World";
+    char message[BUF_SIZE];
 
     if (argc != 2)
     {
@@ -53,9 +53,10 @@ int main(int argc, char *argv[])
     else
         printf("Connected client %d \n", i+1);
     
-    while((str_len = read(clnt_sock, message, BUF_SIZE)) != 0)
+    while((str_len = read(clnt_sock, message, BUF_SIZE)) != 0) {
         write(clnt_sock, message, str_len);
-
+        printf("Recevied message from client: %s\n", message); 
+    }
     close(clnt_sock);
     }
     close(serv_sock);

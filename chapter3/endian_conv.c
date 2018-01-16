@@ -8,8 +8,8 @@ int main(int argc, char *argv[])
     unsigned long host_addr = 0x12345678;
     unsigned long net_addr;
 
-    net_port = htons(host_port);
-    net_addr = htonl(host_addr);
+    net_port = htons(host_port);//主机字节符转网络字节序(short型)
+    net_addr = htonl(host_addr);//主机字节符转网络字节序(long型)
 
     printf("Host ordered port: %#x \n", host_port);
     printf("Network ordered port: %#x \n", net_port);

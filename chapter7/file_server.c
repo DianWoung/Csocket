@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    fp = fopen("file_server.c", "rb");
+    fp = fopen("file_server.c", "rb");//打开文件
     serv_sd = socket(PF_INET, SOCK_STREAM, 0);
 
     memset(&serv_adr, 0, sizeof(serv_adr));
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 
     clnt_adr_sz = sizeof(clnt_adr);
     clnt_sd = accept(serv_sd, (struct sockaddr*)&clnt_adr, &clnt_adr_sz);
-
+    //读取文件内容，并向客户端传输
     while(1)
     {
         read_cnt = fread((void*)buf, 1, BUF_SIZE, fp);
@@ -47,8 +47,9 @@ int main(int argc, char *argv[])
         }
         write(clnt_sd, buf, BUF_SIZE);
     }
-    
+    //文件传输完毕后，半关闭连接，断开输出流，发送EOF
     shutdown(clnt_sd, SHUT_WR);
+    //输入流依然可以使用，在这里接受数据
     read(clnt_sd, buf, BUF_SIZE);
     printf("Message from client: %s \n", buf);
 

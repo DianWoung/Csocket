@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    fp = fopen("receive.data", "wb");
+    fp = fopen("receive.data", "wb"); //创建文件以保存流数据
     sd = socket(PF_INET, SOCK_STREAM, 0);
 
     memset(&serv_adr, 0, sizeof(serv_adr));
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     serv_adr.sin_port = htons(atoi(argv[2]));
 
     connect(sd, (struct sockaddr*)&serv_adr, sizeof(serv_adr));
-
+    //将收到的流信息写入文件
     while((read_cnt = read(sd, buf, BUF_SIZE)) != 0)
         fwrite((void*)buf, 1, read_cnt, fp);
     

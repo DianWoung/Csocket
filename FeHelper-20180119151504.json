@@ -1,0 +1,23 @@
+/* chrome-extension://pkgccpejnmalmdinmhkkfafefagiiiad/template/fehelper_jsonformat.html */
+{
+    "status": true,
+    "msg": "获取成功",
+    "data": {
+        "min": 22,
+        "max": 60,
+        "list": [
+            {
+                "id": 17
+            },
+            {
+                "id": 5
+            },
+            {
+                "id": 26
+            },
+            {
+                "id": 27
+            }
+        ]
+    }
+}

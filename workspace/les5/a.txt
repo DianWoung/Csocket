@@ -1,0 +1,1 @@
+input num b must not equal 0

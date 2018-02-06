@@ -9,7 +9,8 @@
 <body>
     <img id="receiver" style='width:640px;height:480px' />
     <script type="text/javascript" charset="utf-8">
-        var ws = new WebSocket("ws://192.168.0.139:8888");
+        var ws = new WebSocket("ws://127.0.0.1:8888");
+        console.log(ws);
         var image = document.getElementById('receiver');
 
         ws.onopen = function() {

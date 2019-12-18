@@ -50,13 +50,3 @@ Learning TCP/IP Sockets Programming in C
 \* 这是一段十分正常的文本\*
 
 标记行内代码`printf("%d\n", n)`函数
-
-* * *
-
-这是新垣结衣的美照
-![aragakki](aragakki.jpg)
->
-这又是一张链接图片
-![link](https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1515985575&di=aa252740fd67acacf13c276b9b704772&src=http://img.mp.itc.cn/upload/20160719/ddd5bc3e6b9e4f968f0118db81137b82_th.jpg)
-
-一个正常的链接<http://www.baidu.com>
